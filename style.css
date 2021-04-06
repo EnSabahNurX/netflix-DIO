@@ -50,7 +50,7 @@ header .container {
 
 .main-movie {
     font-size: 16px;
-    height: 400px;
+    height: auto;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.themoviedb.org/t/p/original/ogtPIH1quolQcutu4ycUxmPBwSI.jpg');
     background-size: cover;
     display: flex;
@@ -95,6 +95,10 @@ header .container {
     white-space: nowrap;
 }
 
+.buttons {
+    margin-bottom: 10px;
+}
+
 .btn {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
@@ -109,4 +113,44 @@ header .container {
 
 .btn:hover {
     background-color: var(--blue);
+}
+
+i {
+    margin-right: 3px;
+    margin-right: 3px;
+}
+
+/* carousel */
+
+.items {
+    height: 400px;
+    /* padding: 100px; */
+    width: 100%;
+    white-space: nowrap;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: pointer;
+    transition: all 0.2s;
+    transform: scale(0.95);
+    will-change: transform;
+    /* position: relative; */
+    perspective: 500px;
+}
+
+.item {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    transition: all 0.2s;
+}
+
+.item a img {
+    width: 300px;
+}
+
+.items.active {
+    transform: scale(1);
 }
